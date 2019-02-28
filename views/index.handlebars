@@ -1,38 +1,56 @@
+<div class="container">
+
+<div class="row justify-content-md-center m-4">
 <h1>Eat-Da-Burger!</h1>
+<div class="text-center">
+  <img alt="Burger" class="img-thumbnail w-25 " src="/assets/img/burger-drawing.png">
+</div>
+</div>
 
-<h2>Burgers that have been eaten!</h2>
+<div class="row justify-content-md-center">
 
-<ul>
+<div class="col-md-6">
+
+<h2>Burgers still to be eaten!</h2>
+
+<ul class="list-group">
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
+      {{>burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers that haven't been eaten!</h2>
+</div>
 
-<ul>
+<div class="col-md=6">
+<h2> Burgers that have been devoured!</h2>
+
+<ul class="list-group">
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{>burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+</div>
 
-  <div class="form-group">
-    <label for="burger">Burger:</label>
-    <input type="text" id="burger" name="name">
-  </div>
+</div>
 
-  <div class="form-group">
-    <label for="devoured">Eaten?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
-    <input type="radio" name="devoured" value="0"> Fresh
-  </div>
+<div class="row justify-content-md-center m-2">
 
-  <button type="submit">Add Burger</button>
-</form>
+<div class="card text-center p-2" style="width: 18rem;">
+ 
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="burger"><h2>Add-da-Burger</h2></label>
+      <input type="text" class="form-control" id="burger" name="name" placeholder="Enter burger name">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Burger</button>
+  </form>
+</div>
+
+</div>

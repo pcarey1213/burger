@@ -1,8 +1,8 @@
-<li>
-	{{name}}
+<li class="list-group-item">
+	{{burger_name}}
 
-	<button class="change-eaten" data-id="{{id}}" data-eaten="{{eat}}">
-		{{#if eat}}EAT!{{else}}GET ANOTHER!{{/if}}
+	<button type="button" class="change-eaten {{#if devoured}} btn btn-danger {{else}}  btn btn-success {{/if}}" data-id="{{this.id}}" data-eaten="{{devoured}}">
+		{{#if devoured}}Devour!{{else}}Recycle!{{/if}}
 	</button>
-  
+
 </li>
