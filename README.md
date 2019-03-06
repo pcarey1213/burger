@@ -1,5 +1,7 @@
-# burger
+### burger
 Eat-DA-Burger App
+
+Available on Heroku! ("https://agile-retreat-59469.herokuapp.com/")
 
 ### Overview
 
